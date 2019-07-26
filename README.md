@@ -39,4 +39,20 @@ Add this script to youir ``cronjob``:
 ```
 Change ``/path/to/folder`` to your ``refresh.php`` location.
 
+## Example Output
+```json
+{
+    "coord": {
+        "lon": 107.59,
+        "lat": -6.9
+    },
+    "weather": {
+        "time": "2019-07-26 08:35:46",
+        "icon": "https:\/\/openweathermap.org\/img\/wn\/03d@2x.png",
+        "status": "Clouds",
+        "description": "scattered clouds"
+    }
+}
+```
+
 Copyright &copy; 2019. [Satmaxt Developer](https://satmaxt.xyz). Coded with :heart: & :coffee: at Bandung
