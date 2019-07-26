@@ -4,6 +4,12 @@ This package can find current weather status at some location by using ``latitud
 
 This package use API from [OpenWeatherMap](https://openweathermap.org)
 
+## Installation
+To install this package, you can easily install using ``composer`` through this command
+```bash
+$ composer require satmaxt/clther
+```
+
 ## Implementation
 The example implementation of this package can found at ``example`` folder
 
