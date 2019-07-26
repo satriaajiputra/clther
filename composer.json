@@ -1,0 +1,30 @@
+{
+    "name": "satmaxt/clther",
+    "description": "Weather forecast package",
+    "type": "library",
+    "license": "MIT",
+    "version": "0.1.0",
+    "keywords": ["weather", "api weather", "open weather", "openweather"],
+    "time": "2019-07-24",
+    "authors": [
+        {
+            "name": "Satria Aji Putra",
+            "email": "satriamaxt@gmail.com",
+            "homepage": "https://satmaxt.xyz",
+            "role": "developer"
+        }
+    ],
+    "support": {
+        "email": "satriamaxt@gmail.com"
+    },
+    "minimum-stability": "dev",
+    "require": {},
+    "require-dev": {
+        "symfony/var-dumper": "4.3.*"
+    },
+    "autoload": {
+    "psr-4": {
+        "CLTher\\": "src/CLTher/"
+        }
+    }
+}
