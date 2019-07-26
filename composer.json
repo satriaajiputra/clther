@@ -4,7 +4,7 @@
     "type": "library",
     "license": "MIT",
     "version": "0.1.0",
-    "keywords": ["weather", "api weather", "open weather", "openweather"],
+    "keywords": ["weather", "api weather", "open weather", "openweather", "clther"],
     "time": "2019-07-24",
     "authors": [
         {
