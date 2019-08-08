@@ -26,7 +26,7 @@ if(file_exists(SYSTEM_PATH)) {
     echo json_encode($weather->weather, JSON_PRETTY_PRINT);
 } else {
     $weather = new CLTher(SYSTEM_MODE, CONSTANT_PATH);
-    $result = $weather->setLat(LATITUDE)->setLon(LONGITUDE)->getweather();
+    $result = $weather->setLat(LATITUDE)->setLon(LONGITUDE)->setUnits(UNITS)->getweather();
 
     $fl = fopen(SYSTEM_PATH, 'w');
 

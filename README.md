@@ -27,6 +27,9 @@ $constant['SYSTEM_MODE'] = 'PRODUCTION';
 $constant['LATITUDE'] = -6.9042112;
 $constant['LONGITUDE'] = 107.5882227;
 
+// Units (Metric = Celcius, Imperial = Fahrenheit, Default = Kelvin)
+$constant['UNITS'] = 'metric';
+
 // system constant
 $constant['PRODUCTION_API_URL'] = 'https://api.openweathermap.org';
 $constant['DEVELOPMENT_API_URL'] = 'https://samples.openweathermap.org';
@@ -53,11 +56,21 @@ Change ``/path/to/folder`` to your ``refresh.php`` location.
         "lat": -6.9
     },
     "weather": {
-        "time": "2019-07-26 08:35:46",
-        "icon": "https:\/\/openweathermap.org\/img\/wn\/03d@2x.png",
+        "time": "2019-08-08 14:14:33",
+        "icon": "https:\/\/openweathermap.org\/img\/wn\/04d@2x.png",
         "status": "Clouds",
-        "description": "scattered clouds"
-    }
+        "description": "broken clouds"
+    },
+    "main": {
+        "temp": 28.56,
+        "pressure": 1011.11,
+        "humidity": 34,
+        "temp_min": 28.56,
+        "temp_max": 28.56,
+        "sea_level": 1011.11,
+        "grnd_level": 906.98
+    },
+    "units": "metric"
 }
 ```
 

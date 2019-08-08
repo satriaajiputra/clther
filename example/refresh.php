@@ -7,7 +7,7 @@ require __DIR__ . '/constant.php';
 
 $weather = new CLTher(SYSTEM_MODE, CONSTANT_PATH);
 
-$result = $weather->setLat(LATITUDE)->setLon(LONGITUDE)->getweather();
+$result = $weather->setLat(LATITUDE)->setLon(LONGITUDE)->setUnits(UNITS)->getweather();
 
 $fl = fopen(SYSTEM_PATH, 'w');
 

@@ -1,12 +1,14 @@
 <?php
 namespace CLTher;
 
+use Exception;
 use CLTher\Request\Request;
 
 class CLTher extends Request
 {
     private $lat = null,
-            $lon = null;
+            $lon = null,
+            $units = 'default';
 
     public $weather = [];
 
@@ -32,6 +34,13 @@ class CLTher extends Request
         return new CLTher($mode, $constantVar);
     }
 
+    public function setUnits(string $units) {
+        if (in_array($units, ['metric', 'imperial', 'default'])) {
+            $this->units = $units;
+        }
+        return $this;
+    }
+
     public function setLat(float $lat)
     {
         $this->lat = $lat;
@@ -47,13 +56,16 @@ class CLTher extends Request
     public function getWeather()
     {
         if($this->lat && $this->lon) {
-            $data = $this->buildData(['lat', 'lon']);
+            $data = $this->buildData(['lat', 'lon', 'units']);
         }
 
         $request = $this->execute('data/2.5/weather', 'GET', $data);
         
         if($request) {
-            return $this->buildWeather(json_decode($request));
+            $response = json_decode($request);
+            if($response->cod === 401) throw new Exception($response->message, 503);
+            
+            return $this->buildWeather($response);
         } else {
             throw new Exception("Failed while getting weather data", 503);
         }
@@ -70,6 +82,8 @@ class CLTher extends Request
             'status' => $list->main,
             'description' => $list->description
         ];
+        $this->weather['main'] = $weather->main;
+        $this->weather['units'] = $this->units;
 
         return $this->weather;
     }

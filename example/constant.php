@@ -7,6 +7,9 @@ $constant['SYSTEM_MODE'] = 'PRODUCTION';
 $constant['LATITUDE'] = -6.9042112;
 $constant['LONGITUDE'] = 107.5882227;
 
+// Units (Metric = Celcius, Imperial = Fahrenheit, Default = Kelvin)
+$constant['UNITS'] = 'metric';
+
 // system constant
 $constant['PRODUCTION_API_URL'] = 'https://api.openweathermap.org';
 $constant['DEVELOPMENT_API_URL'] = 'https://samples.openweathermap.org';
